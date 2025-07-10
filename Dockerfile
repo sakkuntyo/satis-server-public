@@ -10,6 +10,7 @@ WORKDIR /home/steam
 ENV HOME /home/steam 
 RUN steamcmd +login anonymous +force_install_dir "/home/steam/.steam/steam/steamapps/common/SatisfactoryDedicatedServer" +app_update 1690800 -beta public +quit
 
+# サーバー実行
 WORKDIR /home/steam/.steam/steam/steamapps/common/SatisfactoryDedicatedServer
 CMD ""
 ENTRYPOINT ./FactoryServer.sh
