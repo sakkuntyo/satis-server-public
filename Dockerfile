@@ -1,8 +1,7 @@
 FROM "steamcmd/steamcmd:latest"
 
 # FactoryServer.sh が root では実行できないため専用ユーザー作成
-RUN apt-get update && apt-get install adduser -y
-RUN rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install adduser -y && rm -rf /var/lib/apt/lists/*
 RUN adduser steam --disabled-password --gecos ""
 
 USER steam
